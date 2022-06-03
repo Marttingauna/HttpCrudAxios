@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AxiosService } from '../../services/axios.services';
 
 @Component({
   selector: 'app-lista',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private servicio: AxiosService) { }
 
   ngOnInit(): void {
+    this.servicio.getPersonas()
   }
 
 }

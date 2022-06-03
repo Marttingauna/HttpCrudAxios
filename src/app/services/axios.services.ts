@@ -11,7 +11,7 @@ export class AxiosService {
     return axios
       .get(this.urlPersonasJson)
       .then((response) => {
-        console.log('response', response);
+        console.log('response', response.data);
         return response.data;
       })
       .catch((error) => {
